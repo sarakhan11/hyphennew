@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/enum.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@500&amp;family=Lato:wght@100;400&amp;family=Mali&amp;family=Merriweather:wght@300&amp;family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins&amp;family=Raleway&amp;family=Roboto:wght@100;400;500;700&amp;family=Salsa&amp;display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>ZHYPHEN1</title>
+</head>
+<body class="flex flex-col justify-center items-center overflow-x-hidden">
+<div class="justify-center align-center items-center mx-auto m-auto">
+    <div class="justify-center align-center items-center mx-auto hero-bg">
+
+
+<!-- nav & hero section  -->
+
+        <div class="justify-center align-center items-center mx-auto bg-[url('https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%20101%20%284%29.png')]">
+        <div class="colorContent backgroundProperty ">
+            <div class="md:flex md:items-center md:justify-between pb-3 flex-row sm:flex-column ">
+                <div class="flex items-center justify-between">
+                    <div class=" md:ml-20 ml-4 cursor-pointer"><a class="relative logo font-bold text-2xl text-[#1F2937] font-[inter]" href="#">HYPHEN</a></div>
+                    <div onclick="toogleMenu(true) ;tooglecross(true);" class="text-4xl cursor-pointer md:hidden block lg:hidden">
+                        <ion-icon name="menu" role="img" class="md hydrated" aria-label="menu"></ion-icon>
+                    </div>
+                </div>
+                <div class="flex md:block lg:block hidden ml-auto" id="Menu">
+                    <span>
+                        <ion-icon name="close-outline" onclick="toogleMenu(false);tooglecross(false);" class="md:hidden block ml-auto md:m-0 mt-1 ml-8 md hydrated" role="img" aria-label="close outline">
+                        </ion-icon>
+                    </span>
+                    <ul class="md:flex md:items-center text-base text-zins-900 md:ml-auto">
+                        <li class="relative pl-0.5 pr-7 ml-4 md:ml-0 my-4 md:my-0 font-[poppins] font-normal text-sm text-[#1F2937]"><a href="#" alt="Home" class=" hover:border-b hover:border-gray-900 pb-1.5 mb-0 mt-1">Home</a></li>
+                        <li class="relative">
+                            <button
+                              class="pl-0.5 pr-7 ml-4 md:ml-0 my-4 md:my-0 font-[poppins] font-normal text-sm text-[#1F2937]"
+                              onclick="openResources1()"
+                              id="a1"
+                            >
+                              Resource
+                                <span>
+                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/chevron-down.svg" alt="" class="show" id="arrow"/>
+                                </span>
+                            </button>
+                            <div
+                              id="Dropdown1"
+                              class="absolute bg-white py-8 px-4 show1 top-4 xl:-ml-96 lg:-ml-80 md:-ml-64 rounded-[40px] w-[320px] xl:w-[1084px] lg:w-[900px] md:w-[700px] sm:w-[342px] mx-auto mt-4"
+                            >
+                              <h1 class="text-gray-800 font-medium text-lg pb-6">
+                                Resources
+                              </h1>
+                              <div class=" grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-y-6">
+                                <div class="flex flex-col  gap-y-8">
+                                  <div class="flex gap-x-4 items-start">
+                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/bubble.svg" alt="" class="pt-1"/>
+                                    <div>
+                                      <p class="font-medium text-sm pb-2">Free tools</p>
+                                      <p class="text-gray-600 font-normal text-xs">
+                                        Free tools for marketing improvement
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="flex gap-x-4 items-start">
+                                    <img
+                                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/video.svg"
+                                      alt=""
+                                      class="pt-0.5"
+                                    />
+                                    <div>
+                                      <p class="font-medium text-sm pb-2">Webinars</p>
+                                      <p class="text-gray-600 font-normal text-xs">
+                                        Events with marketing, operations, and
+                                        professionals
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="flex gap-x-4 items-start">
+                                    <img
+                                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/book.svg"
+                                      alt=""
+                                      class="pt-0.5"
+                                    />
+                                    <div>
+                                      <p class="font-medium text-sm pb-2">Books</p>
+                                      <p class="text-gray-600 font-normal text-xs">
+                                        Detailed instructions with leading B2B teams
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="flex gap-x-4 items-start">
+                                    <img
+                                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sms.svg"
+                                      alt=""
+                                      class="pt-0.5"
+                                    />
+                                    <div>
+                                      <p class="font-medium text-sm pb-2">Newsletter</p>
+                                      <p class="text-gray-600 font-normal text-xs">
+                                        Exclusive information and interesting stories,
+                                        every month
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="flex flex-col gap-y-8">
+                                  <div class="flex gap-x-4 items-start">
+                                    <img
+                                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/judge.svg"
+                                      alt=""
+                                      class="pt-1"
+                                    />
+                                    <div>
+                                      <p class="font-medium text-sm pb-2">
+                                        Help center
+                                      </p>
+                                      <p class="text-gray-600 font-normal text-xs">
+                                        Get to know our features
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="flex gap-x-4 items-start">
+                                    <img
+                                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/lovely.svg"
+                                      alt=""
+                                      class="pt-0.5"
+                                    />
+                                    <div>
+                                      <p class="font-medium text-sm pb-2">
+                                        Customer stories
+                                      </p>
+                                      <p class="text-gray-600 font-normal text-xs">
+                                        Get inspired by our customers
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="flex gap-x-4 items-start">
+                                    <img
+                                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/bookss.svg"
+                                      alt=""
+                                      class="pt-0.5"
+                                    />
+                                    <div>
+                                      <p class="font-medium text-sm pb-2">
+                                        Documentation
+                                      </p>
+                                      <p class="text-gray-600 font-normal text-xs">
+                                        The knowledge hub for installing and maintaining
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="flex gap-x-4 items-start">
+                                    <img
+                                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/lock.svg"
+                                      alt=""
+                                      class="pt-0.5"
+                                    />
+                                    <div>
+                                      <p class="font-medium text-sm pb-2">Security</p>
+                                      <p class="text-gray-600 font-normal text-xs">
+                                        Protect user privacy and security to ensure
+                                        compliance
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="flex flex-col gap-y-8">
+                                  <div class="flex gap-x-4 items-start">
+                                    <img
+                                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/bubble.svg"
+                                      alt=""
+                                      class="pt-1"
+                                    />
+                                    <div>
+                                      <p class="font-medium text-sm pb-2">Free tools</p>
+                                      <p class="text-gray-600 font-normal text-xs">
+                                        Free tools for marketing improvement
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="flex gap-x-4 items-start">
+                                    <img
+                                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/video.svg"
+                                      alt=""
+                                      class="pt-0.5"
+                                    />
+                                    <div>
+                                      <p class="font-medium text-sm pb-2">Webinars</p>
+                                      <p class="text-gray-600 font-normal text-xs">
+                                        Events with marketing, operations, and
+                                        professionals
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>                    
+                        <li class="relative pl-0.5 pr-7 ml-4 md:ml-0 my-4 md:my-0 font-[poppins] font-normal text-sm text-[#1F2937]"><a href="#" alt="Blog" class=" hover:border-b hover:border-gray-900 pb-1.5 mb-0 mt-1">Blog</a></li>                    
+                        <li class="relative pr-7 ml-4 md:ml-0 my-4 md:my-0 font-[poppins] font-normal text-sm text-[#1F2937]"><a href="#" alt="Pricing" class=" hover:border-b hover:border-gray-900 pb-1.5 mb-0 mt-1">Pricing</a></li>
+                    </ul>
+                </div>
+
+                    <button class="relative bg-transparent rounded-3xl border border-[#1F2937] px-4 py-3.5 text-sm mr-20 md:ml-auto mt-3.5  md:block  hidden" id="cross">
+                        Get Started
+                    </button>
+                    
+            </div>
+    
+<!-- nav close  -->
+
+
+        <div class="">
+            <div class="flex flex-col mt-28">
+                <h1 class="xl:text-7xl lg:text-7xl md:text-7xl sm:text-4xl text-4xl text-center font-semibold text-[#1F2937] font-[poppins] ">
+                    In any market, achieve 
+                </h1>
+                <h1 class="xl:text-7xl lg:text-7xl md:text-7xl sm:text-4xl text-4xl text-center font-semibold text">
+                    your target
+                </h1>
+            </div>
+            <p class="mt-6 text-center mx-auto font-normal text-xl font-[poppins] text-[#4B5563] leading-[32.9px] xl:w-[842px] lg:w-[842px] md:w-[642px] sm:w-[342px] w-[324px]">
+                Create demand from ideal customers, collect it, and convert it all from a single, strong, and adaptable go-to-market platform.
+            </p>
+
+            <form class="mt-10 gap-4 mx-auto justify-center flex flex-col xl:flex-row lg:flex-row md:flex-col sm:flex-col" action="#" method="get">
+                <input class="py-4 px-4 xl:w-[456px] lg:w-[456px] xl:mx-0 lg:mx-0 md:mx-auto sm:mx-auto mx-auto md:w-[456px] sm:w-[248px] w-[248px] rounded-3xl " type="text" placeholder="Enter Your Email" name="search">
+                <button class="bg-[#1F2937] rounded-3xl px-4 py-4 xl:mx-0 lg:mx-0 md:mx-auto sm:mx-auto mx-auto text-white w-[152px] xl:w-[152px] lg:w-[152px] md:w-[456px] sm:w-[248px] w-[248px] font-[poppins]" type="submit">Request Demo</button>
+            </form>
+        </div>
+        <div>
+            <img class="h-[400px] w-[1000px] mx-52 mt-12 xl:absolute lg:relative md:relative sm:relative hidden xl:block  " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/graph.svg">
+            <div class="flex flex-col xl:flex-row pb-20 lg:flex-row md:flex-row sm:flex-col justify-center">
+
+                <div class="mx-1 bg-[#FFFFFF] xl:w-[427px] lg:w-[427px] md:w-[427px] sm:w-[320px] w-[310px] xl:h-[265px] lg:h-[265px] md:h-[265px] sm:h-[265px] h-[395px] rounded-3xl p-4 relative mt-48 -mr-24">
+                    <h1 class="font-light text-xl text-[#1F2937] text-center mx-14 my-10">
+                        We reach and convert more of our ideal customers, more quickly.
+                    </h1>
+                    <div class="mt-12 flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-col mx-auto">
+                        <img class="border-r border-black ml-11  mx-auto xl:pr-4 lg:pr-4 md:pr-4 sm:pr-4 pr-0 mt-2 w-32 h-9" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rubrik%20svg.png">
+                        <div class="flex flex-col">
+                            <h2 class="xl:mx-6 lg:mx-6 md:mx-6 sm:mx-auto mx-auto font-[poppins] text-[#1F2937] font-medium text-lg">
+                                Devin Kuhlman
+                            </h2>
+                            <h2 class="xl:mx-6 lg:mx-6 md:mx-6 sm:mx-auto mx-auto font-[poppins] text-[#4B5563] font-normal text-sm ">
+                                Dynamic Data Strategist
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <img class="w-[401px] h-[401px] mt-16  relative" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/unsplash_d1UPkiFd04A.png">
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+<!-- nav & hero section close -->
+
+
+<!-- mission section start  -->
+<div class="justify-center align-center items-center mx-auto">
+    <div class="mx-2 xl:mx-20 lg:mx-10 md:mx-4 sm:mx-2 my-20">
+        <div class="">
+            <h1 class="xl:w-[842px] lg:w-[842px] md:w-[650px] sm:w-[322px] w-[310px] text-[#1F2937] font-medium text-3xl xl:text-5xl lg:text-5xl md:text-5xl sm:text-3xl font-[poppins] leading-[60px] mx-auto text-center">
+                Our mission is to help businesses grow faster and smarter
+            </h1>
+            <h1 class="xl:w-[842px] lg:w-[842px] md:w-[650px] sm:w-[322px] w-[310px] text-[#4B5563] font-normal text-lg leading-[29.61px] mt-6 font-[poppins] mx-auto text-center">
+                We’re a company of builders, working together to shape the future of revenue-driven marketing. Just as we help companies build a foundation for growth
+            </h1>
+
+            <div class="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 gap-8 sm:grid-cols-1 mt-12">
+                <div class="">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/flag.png" class="w-16 h-16 mx-auto mb-12 mt-2" alt=""/>
+                    <h1 class="font-medium mx-auto text-center text-2xl text-[#1F2937] leading-[24px] font-[poppins]">
+                        Founded
+                    </h1>
+                    <h1 class="text-[#4B5563] font-normal text-lg leading-[29.61px] mt-4 px-2 font-[poppins] mx-auto text-center">
+                        The company was founded in 1997
+                    </h1>
+                </div>
+
+
+                <div class="">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/status-up.png" class="w-16 h-16 mx-auto mb-12 mt-2" alt=""/>
+                    <h1 class="font-medium mx-auto text-center text-2xl text-[#1F2937] leading-[24px] font-[poppins]">
+                        50M growth
+                    </h1>
+                    <h1 class="text-[#4B5563] font-normal text-lg leading-[29.61px] mt-4 px-2 font-[poppins] mx-auto text-center">
+                        Over 500 million records are enriched
+                    </h1>
+                </div>
+
+
+                <div class="">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/profile-2user.png" class="w-16 h-16 mx-auto mb-12 mt-2" alt=""/>
+                    <h1 class="font-medium mx-auto text-center text-2xl text-[#1F2937] leading-[24px] font-[poppins]">
+                        400K User
+                    </h1>
+                    <h1 class="text-[#4B5563] font-normal text-lg leading-[29.61px] mt-4 px-2 font-[poppins] mx-auto text-center">
+                        Approximately 4000k+ are using Hyphen
+                    </h1>
+                </div>
+
+
+                <div class="">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/empty-wallet.png" class="w-16 h-16 mx-auto mb-12 mt-2" alt=""/>
+                    <h1 class="font-medium mx-auto text-center text-2xl text-[#1F2937] leading-[24px] font-[poppins]">
+                        1K+ customers
+                    </h1>
+                    <h1 class="text-[#4B5563] font-normal text-lg leading-[29.61px] mt-4 px-2 font-[poppins] mx-auto text-center">
+                        Giving a thousands of business customers
+                    </h1>
+                </div>
+            </div>
+            <button class="bg-[#1F2937] rounded-3xl px-4 py-4 text-white w-[152px] mt-16 mx-auto justify-center flex font-[poppins]" type="submit">
+                Get Started
+            </button>
+        </div>
+    </div>
+    </div>
+
+<!-- mission section end -->
+
+<!-- analyze section start -->
+
+<div class="bg-[url('https://tuk-cdn.s3.amazonaws.com/can-uploader/Mask+group+%282%29.png')]">
+<div class="justify-center align-center items-center mx-auto">
+
+    <div class="">
+        <div class=" py-20 flex flex-col xl:flex-row lg:flex-col md:flex-col sm:flex-col">
+            <div class="xl:w-[624px] lg:w-[624px] md:w-[624px] sm:w-[320px] w-[320] mx-2  xl:mx-20 lg:mx-36 md:mx-20 sm:mx-2 my-20">
+                <div class="flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-col">
+                    <div class="w-[305px] absolute h-[445px] py-12 bg-[#E5E7EB] border border-gray rounded-2xl ">
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Group%2033684.png" class="" alt=""/>
+                        <div class="font-[poppins] font-medium text-3xl leading-[30px] mx-auto text-center mt-7">
+                            Taylor Smith
+                        </div>
+                        <h2 class="mx-8 text-center mt-6 font-[poppins] text-[#4B5563] font-normal text-sm leading-[28px] ">
+                            Sales development representative
+                        </h2>
+                        <h1 class="font-medium mt-6 mx-auto text-center text-lg text-[#1F2937] leading-[24px] font-[poppins]">
+                            23 years old
+                        </h1>
+                    </div>
+
+                    <div class="xl:w-[371px] lg:w-[371px] md:w-[371px] sm:w-[321px] w-[300px] relative xl:ml-72 lg:ml-72 md:ml-72 sm:ml-2 ml-2 xl:mt-44 lg:mt-44 md:mt-44 sm:mt-96 mt-96 xl:h-[472px] lg:h-[472px] md:h-[472px] sm:h-[552px] h-[552px] p-8 border border-gray rounded-3xl">
+                        <h1 class="font-medium mb-6 text-left text-2xl text-[#1F2937] leading-[24px] font-[poppins] hidden xl:block lg:block md:block sm:hidden ">
+                            Profile
+                        </h1>
+                        <div class="bg-[#FFFFFF] p-6 mt-20">
+                            <div>
+                                <h1 class="font-medium mx-auto text-left text-base text-[#1F2937] leading-[24px] font-[poppins]">
+                                    Country
+                                </h1>
+                                <h2 class="text-left  font-[poppins] text-[#4B5563] font-normal text-sm leading-[28px] ">
+                                    United States of America
+                                </h2>
+                            </div>
+
+                            <div class="mt-2.5">
+                                <h1 class="font-medium mx-auto text-left text-base text-[#1F2937] leading-[24px] font-[poppins]">
+                                    Position
+                                </h1>
+                                <h2 class="text-left  font-[poppins] text-[#4B5563] font-normal text-sm leading-[28px] ">
+                                    SDR, BDR, Account manager
+                                </h2>
+                            </div>
+
+                            <div class="mt-2.5">
+                                <h1 class="font-medium mx-auto text-left text-base text-[#1F2937] leading-[24px] font-[poppins]">
+                                    Daily Focus
+                                </h1>
+                                <h2 class="text-left  font-[poppins] text-[#4B5563] font-normal text-sm leading-[28px] ">
+                                    Reaching out to leads, managing network
+                                </h2>
+                            </div>
+
+                            <div class="mt-2.5">
+                                <h1 class="font-medium mx-auto text-left text-base text-[#1F2937] leading-[24px] font-[poppins]">
+                                    Email
+                                </h1>
+                                <h2 class="text-left  font-[poppins] text-[#4B5563] font-normal text-sm leading-[28px] ">
+                                    taylorsmith@gmail.com
+                                </h2>
+                            </div>
+
+                            <h2 class="text-left mt-2.5 font-[poppins] text-[#4B5563] font-normal text-sm leading-[28px] ">
+                                “I try to be as efficient as possible” 
+                            </h2>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="xl:w-[624px] lg:w-[624px] md:w-[624px] sm:w-[320px] w-[320] ml-2 xl:ml-20 lg:ml-36 md:ml-4 sm:ml-2">
+                <h1 class="xl:w-[515px] lg:w-[515px] md:w-[515px] sm:w-[322px] w-[322px] text-[#1F2937] font-medium text-3xl xl:text-5xl lg:text-4xl md:text-5xl sm:text-3xl font-[poppins] leading-[60px] mx-auto mt-20 text-left">
+                    Analyze your market, identify your buyer
+                </h1>
+
+                <div class="">
+                    <div class="flex mt-6 mx-2">
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/tick.png" class="w-6 h-6 mx-2" alt=""/>
+                        <h1 class="font-medium text-left text-xl xl:text-2xl lg:text-lg md:text-2xl sm:text-xl text-[#4B5563] leading-[18px] font-[poppins]">
+                            Activate your Ideal Customer Profile 
+                        </h1>
+                    </div>
+
+                    <div class="flex mt-6 mx-2">
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/tick.png" class="w-6 h-6 mx-2" alt=""/>
+                        <h1 class="font-medium text-left text-xl xl:text-2xl lg:text-lg md:text-2xl sm:text-xl text-[#4B5563] leading-[18px] font-[poppins]">
+                            Determine your purpose
+                        </h1>
+                    </div>
+
+                    <div class="flex mt-6 mx-2">
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/tick.png" class="w-6 h-6 mx-2" alt=""/>
+                        <h1 class="font-medium text-left text-xl xl:text-2xl lg:text-lg md:text-2xl sm:text-xl text-[#4B5563] leading-[18px] font-[poppins]">
+                            Research the state of the industry 
+                        </h1>
+                    </div>
+
+                    <div class="flex mt-6 mx-2">
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/tick.png" class="w-6 h-6 mx-2" alt=""/>
+                        <h1 class="font-medium text-left text-xl xl:text-2xl lg:text-lg md:text-2xl sm:text-xl text-[#4B5563] leading-[18px] font-[poppins]">
+                            Identify your target customer 
+                        </h1>
+                    </div>
+
+                    <div class="flex mt-6 mx-2">
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/tick.png" class="w-6 h-6 mx-2" alt=""/>
+                        <h1 class="font-medium text-left text-xl xl:text-2xl lg:w-96 xl:w-96 sm:w-72 w-72 lg:text-lg md:text-2xl sm:text-xl text-[#4B5563] leading-[24px] font-[poppins]">
+                            Combine the information from all of your existing go-to-market tools
+                        </h1>
+                    </div>
+
+
+                    <button class="bg-[#000000] rounded-3xl ml-8 py-4 text-white w-[179px] mt-16 font-[poppins]" type="submit">
+                        Create Your Profile
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- analyze section end -->
+
+
+<!-- build section start -->
+
+<div class="justify-center align-center items-center mx-auto">
+    <div class="px-2 xl:px-20 lg:px-10 md:px-8 sm:px-2 py-20 flex flex-col gap-y-10 xl:flex-row lg:flex-col md:flex-col sm:flex-col ">
+        <div class="xl:w-[624px] lg:w-[624px] md:w-[624px] sm:w-[320px] w-[320]">
+            <h1 class="xl:w-[624px] lg:w-[515px] md:w-[624px] sm:w-[322px] w-[322px] text-[#1F2937] font-medium text-3xl xl:text-5xl lg:text-5xl md:text-5xl sm:text-3xl font-[poppins] leading-[60px] mx-auto mt-20 text-left">
+                Build a demand-driven engine
+            </h1>
+            <h1 class="font-medium text-left xl:text-2xl lg:text-2xl md:text-2xl sm:text-xl text-xl w-[324px] xl:w-full lg:w-full md:w-full sm:w-[324px] text-[#4B5563] leading-[29.24px] mt-6 font-[poppins]">
+                With targeted advertising and email campaigns, convert prospects into consumers. 
+                Create target audiences using 100+ B2B traits and website intent signals, find 
+                high-fit accounts exploring your site, and tailor every engagement. 
+            </h1>
+        </div>
+
+        <div class="xl:w-[624px] lg:w-[624px] md:w-[624px] sm:w-[320px] w-[320] ">
+            <div class="flex flex-row ml-0 mx-2 xl:ml-28 lg:ml-20 md:ml-10 sm:ml-8 ">
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Group%20427319065.png" class="hidden xl:block lg:block md:block w-10 h-[484px] mt-8" alt=""/>
+                <div class="flex flex-col xl:ml-8 lg:ml-8 md:ml-8 sm:ml-8 ml-0">
+                    <div class=" bg-white py-8 px-6 flex flex-row rounded-2xl mt-10 xl:w-[292px] lg:w-[292px] md:w-[292px] sm:w-[310px] w-[310px] h-[92px]">
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/element-1.png" class="w-8 h-8" alt=""/>
+                        <h2 class="ml-6 my-auto font-[poppins] text-[#1F2937] font-medium text-lg">
+                            Personalize Site
+                        </h2>
+                    </div>
+
+                    <div class="">
+                        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                            <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
+
+                            <style>
+                            @import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
+                            @import url(https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css);
+                            </style>
+
+                            <div class="bg-white xl:w-[443px] lg:w-[443px] md:w-[443px] sm:w-[310px] w-[310px] h-[281px] bg-white rounded-2xl flex items-center justify-center xl:px-5 px-0 lg:px-5 md:px-5 sm:px-5 -mt-36">
+                                <div class="bg-[#F9FAFB] text-gray-500 rounded shadow-xl  xl:w-[443px] lg:w-[443px] md:w-[443px] sm:w-[310px] w-[310px] h-[151px]" x-data="{chartData:chartData()}" x-init="chartData.fetch()">
+                                    <div class="flex flex-wrap items-end -mt-8">
+                                        <div class="flex-1">
+                                            <h3 class="text-xs font-semibold font-semibold leading-tight">Qualified Leads</h3>
+                                        </div>
+                                        <div class="relative" @click.away="chartData.showDropdown=false">
+                                            <button class="text-xs hover:text-gray-300 h-6 focus:outline-none" @click="chartData.showDropdown=!chartData.showDropdown">
+                                                <span x-text="chartData.options[chartData.selectedOption].label"></span><i class="ml-1 mdi mdi-chevron-down"></i>
+                                            </button>
+                                            <div class="bg-gray-700 shadow-lg rounded text-sm absolute top-auto right-0 min-w-full w-32 z-30 mt-1 -mr-3" x-show="chartData.showDropdown" style="display: none;" x-transition:enter="transition ease duration-300 transform" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease duration-300 transform" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4">
+                                                <span class="absolute top-0 right-0 w-3 h-3 bg-gray-700 transform rotate-45 -mt-1 mr-3"></span>
+                                                <div class="bg-gray-700 rounded w-full relative z-10 py-1">
+                                                    <ul class="list-reset text-xs">
+                                                        <template x-for="(item,index) in chartData.options">
+                                                            <li class="px-4 py-2 hover:bg-gray-600 hover:text-white transition-colors duration-100 cursor-pointer" :class="{'text-white':index==chartData.selectedOption}" @click="chartData.selectOption(index);chartData.showDropdown=false">
+                                                                <span x-text="item.label"></span>
+                                                            </li>
+                                                        </template>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <canvas id="chart" class=""></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                            Number.prototype.comma_formatter = function() {
+                                return this.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+                            }
+
+                            let chartData = function(){
+                                return {
+                                    date: 'today',
+                                    options: [
+                                        {
+                                            label: 'Monthly',
+                                            value: 'today',
+                                        },
+                                        {
+                                            label: 'Last 7 Days',
+                                            value: '7days',
+                                        },
+                                        {
+                                            label: 'Last 30 Days',
+                                            value: '30days',
+                                        },
+                                        {
+                                            label: 'Last 6 Months',
+                                            value: '6months',
+                                        },
+                                        {
+                                            label: 'This Year',
+                                            value: 'year',
+                                        },
+                                    ],
+                                    showDropdown: false,
+                                    selectedOption: 0,
+                                    selectOption: function(index){
+                                        this.selectedOption = index;
+                                        this.date = this.options[index].value;
+                                        this.renderChart();
+                                    },
+                                    data: null,
+                                    fetch: function(){
+                                        fetch('https://cdn.jsdelivr.net/gh/swindon/fake-api@master/tailwindAlpineJsChartJsEx1.json')
+                                            .then(res => res.json())
+                                            .then(res => {
+                                                this.data = res.dates;
+                                                this.renderChart();
+                                            })
+                                    },
+                                    renderChart: function(){
+                                        let c = false;
+
+                                        Chart.helpers.each(Chart.instances, function(instance) {
+                                            if (instance.chart.canvas.id == 'chart') {
+                                                c = instance;
+                                            }
+                                        });
+
+                                        if(c) {
+                                            c.destroy();
+                                        }
+
+                                        let ctx = document.getElementById('chart').getContext('2d');
+
+                                        let chart = new Chart(ctx, {
+                                            type: "line",
+                                            data: {
+                                                labels: this.data[this.date].data.labels,
+                                                datasets: [
+                                                    {
+                                                        
+                                                        data: this.data[this.date].data.income,
+                                                    },
+                                                    {
+                                                        
+                                                        data: this.data[this.date].data.expenses,
+                                                    },
+                                                ],
+                                            },
+                                            layout: {
+                                                padding: {
+                                                    right: 10
+                                                }
+                                            },
+                                            options: {
+                                                scales: {
+                                                    yAxes: [{
+                                                        gridLines: {
+                                                            display: false
+                                                        },
+                                                        ticks: {
+                                                            callback: function(value,index,array) {
+                                                                return value > 1000 ? ((value < 1000000) ? value/1000 + 'K' : value/1000000 + 'M') : value;
+                                                            }
+                                                        }
+                                                    }]
+                                                }
+                                            }
+                                        });
+                                    }
+                                }
+                            }
+                            </script>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- build section end -->
+
+
+    <!-- boost revenue section start -->
+
+
+    <div class="justify-center align-center items-center mx-auto">
+    <div class="px-2 flex flex-col xl:flex-row lg:flex-row md:flex-col sm:flex-col xl:px-20 lg:px-10 md:px-8 sm:px-2 py-20 ">
+        <div class="xl:w-[515px] lg:w-[515px] md:w-[515px] sm:w-[310px] w-[310px] h-[459px] bg-[#F9FAFB] rounded-2xl mr-20 mt-10 px-5 py-5">
+            <div class="flex">
+                <div class="text-gray-600 font-bold md:text-[9.86101px] text-[6.49px]">
+                    Dashboard
+                </div>
+
+                <div
+                    class="ml-auto flex bg-white justify-center items-center gap-1 md:px-3 px-2 md:py-1 py-0.5">
+                    <h1 class="md:text-[6.27519px] text-[4.19px] text-gray-800 font-medium">
+                        28 jan, 2021 - 28 Dec, 2021
+                    </h1>
+
+                    <div class="">
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/shape.svg" />
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="flex gap-2 w-full mt-4 ">
+                <div class="bg-white w-full h-[56px] flex justify-between items-center px-2 py-2 rounded">
+                    <div class="">
+                        <h1 class="text-[4.14px] text-gray-600 font-bold md:text-[6.28px]">
+                            Todays Revenue
+                        </h1>
+                        <h1 class="md:text-[10.76px] text-[7.19px] text-gray-800 font-bold mt-0.5">
+                            $8.2K
+                        </h1>
+                        <h1 class="font-medium mt-0.5 md:text-[6.28px] text-gray-600 text-[4.19px] ">
+                            Availabale to payout
+                        </h1>
+                    </div>
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Group%20268.png" class="w-[26.89px] h-[26.89px]" alt=""/>
+                </div>
+
+
+                <div class="bg-white w-full h-[56px] flex justify-between items-center px-2 py-2 rounded">
+                    <div class="">
+                        <h1 class="text-[4.14px] text-gray-600 font-bold md:text-[6.28px]">
+                            Todays Sales
+                        </h1>
+                        <h1 class="md:text-[10.76px] text-[7.19px] text-gray-800 font-bold mt-0.5">
+                            $20.4K
+                        </h1>
+                        <h1 class="font-medium mt-0.5 md:text-[6.28px] text-gray-600 text-[4.19px]">
+                            We have sold 123 items
+                        </h1>
+                    </div>
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Group%20268.png" class="w-[26.89px] h-[26.89px]" alt=""/>
+                </div>
+
+                <div class="bg-white w-full h-[56px] flex justify-between items-center px-2 py-2 rounded">
+                    <div class="">
+                        <h1 class="text-[4.14px] text-gray-600 font-bold md:text-[6.28px]">
+                            In Escrow
+                        </h1>
+                        <h1 class="md:text-[10.76px] text-[7.19px] text-gray-800 font-bold mt-0.5">
+                            $18.2K
+                        </h1>
+                        <h1 class="font-medium mt-0.5 md:text-[6.28px] text-gray-600 text-[4.19px]">
+                            Availabale to payout
+                        </h1>
+                    </div>
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Group%20268.png" class="w-[26.89px] h-[26.89px]" alt=""/>
+                </div>
+                </div>
+
+                <div class="flex mt-2 gap-x-2">
+                <div class="bg-white lg:max-w-[313.83px] w-full px-2 rounded">
+                    <div class="">
+                        <div class="flex mt-2">
+                            <div class="text-gray-800 font-bold md:text-[7.17px] text-[4.79px]"
+                                style="font-size: 7.17px">
+                                Total Revenue
+                            </div>
+                            <div class="flex gap-2 ml-auto">
+                                <div class="flex items-center gap-0.5">
+                                    <div class="">
+                                        <img
+                                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Ellipse%20452.svg" />
+                                    </div>
+                                    <h1 class="text-gray-600 font-medium md:text-[5.38px] text-[4px]">
+                                        Profit
+                                    </h1>
+                                </div>
+                                <div class="flex items-center gap-0.5">
+                                    <div class="">
+                                        <img
+                                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Ellipse%20453.svg" />
+                                    </div>
+                                    <h1 class="text-gray-600 font-medium md:text-[5.38px] text-[4px]">
+                                        Loss
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-0.5">
+                            <div class="text-gray-800 font-bold mt-0.5 md:text-[10.76px] text-[7px]">
+                                $50.4K
+                            </div>
+                            <div class="ml-1">
+                                <img
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Arrow%201.svg" />
+                            </div>
+                            <div class="text-gray-600 font-medium mt-0.5 md:text-[5.38px] text-[4px]">
+                                5% than last month
+                            </div>
+                        </div>
+                        <div class="w-full -mt-3">
+                            <canvas id="Chartjs"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white lg:max-w-[155.05px] md:max-w-[221.05px] w-full rounded px-2 py-2">
+                    <h1 class="text-gray-800 font-bold md:text-[8px] text-[5.39px]">
+                        Most Sold Items
+                    </h1>
+                    <div class="md:mt-4 lg:mt-1 mt-0.5">
+                        <div class="flex">
+                            <div class="text-gray-800 font-semibold md:text-[7.51px] text-[4px]">
+                                Jeans
+                            </div>
+                            <div
+                                class="ml-auto text-gray-800 font-bold md:mt-1 lg:mt-0.5 mt-0.5 md:text-[7.51px] text-[4px]">
+                                70%
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1">
+                            <div class="bg-gray-600 h-1 rounded-full" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="md:mt-2.5 mt-0.5">
+                        <div class="flex">
+                            <div class="text-gray-800 font-semibold md:text-[7.51px] text-[4px]">
+                                Shirts
+                            </div>
+                            <div class="ml-auto text-gray-800 font-bold md:text-[7.51px] text-[4px]">
+                                45%
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 md:mt-1 lg:mt-0.5 mt-0.5">
+                            <div class="bg-gray-600 h-1 rounded-full" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div class="mt-2.5">
+                        <div class="flex">
+                            <div class="text-gray-800 font-semibold md:text-[7.51px] text-[4px]">
+                                Belts
+                            </div>
+                            <div class="ml-auto text-gray-800 font-bold md:text-[7.51px] text-[4px]">
+                                60%
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 md:mt-1 lg:mt-0.5 mt-0.5">
+                            <div class="bg-gray-600 h-1 rounded-full" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="mt-2.5">
+                        <div class="flex">
+                            <div class="text-gray-800 font-semibold md:text-[7.51px] text-[4px]">
+                                Caps
+                            </div>
+                            <div class="ml-auto text-gray-800 font-bold md:text-[7.51px] text-[4px]">
+                                80%
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 md:mt-1 lg:mt-0.5 mt-0.5">
+                            <div class="bg-gray-600 h-1 rounded-full" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="mt-2.5">
+                        <div class="flex">
+                            <div class="text-gray-800 font-semibold md:text-[7.51px] text-[4px]">
+                                Others
+                            </div>
+                            <div class="ml-auto text-gray-800 font-bold md:text-[7.51px] text-[4px]">
+                                20%
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 md:mt-1 lg:mt-0.5 mt-0.5">
+                            <div class="bg-gray-600 h-1 rounded-full" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="bg-white mt-2 px-3 py-2 rounded">
+                <h1 class="text-gray-800 font-bold md:text-[7.17165px] text-[4.79px]">
+                    Latest Orders
+                </h1>
+                <div class="border rounded bg-white mt-1">
+                    <div class="flex bg-blue-50 justify-between px-3 py-1" tyle="font-size: 7px">
+                        <div class="text-gray-800 font-normal md:text-[7.17165px] text-[4.79px]">
+                            Products
+                        </div>
+                        <div class="text-gray-800 font-normal md:text-[7.17165px] text-[4.79px]">
+                            Order ID
+                        </div>
+                        <div class="text-gray-800 font-normal md:text-[7.17165px] text-[4.79px]">
+                            Date
+                        </div>
+                        <div class="text-gray-800 font-normal md:text-[7.17165px] text-[4.79px]">
+                            Customer name
+                        </div>
+                        <div class="text-gray-800 font-normal md:text-[7.17165px] text-[4.79px]">
+                            Status
+                        </div>
+                        <div class="text-gray-800 font-normal md:text-[7.17165px] text-[4.79px]">
+                            Amount
+                        </div>
+                        <div class="text-gray-800 font-normal md:text-[7.17165px] text-[4.79px]">
+                            Action
+                        </div>
+                    </div>
+                    <div class="flex px-3 justify-between w-full py-1">
+                        <div class="w-11">
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Iphone 13 Pro
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Mackbook Pro
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Apple Watch
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Microsoft Book
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Apple Pen
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Airpods
+                            </div>
+                        </div>
+                        <div class="w-5">
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                #11232
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                #11232
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                #11232
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                #11232
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                #11232
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                #11232
+                            </div>
+                        </div>
+
+                        <div class="w-9">
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Jun 29,2022
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Jun 29,2022
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Jun 29,2022
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Jun 29,2022
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Jun 29,2022
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Jun 29,2022
+                            </div>
+                        </div>
+                        <div class="w-12">
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Afaq Karim
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Afaq Karim
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Afaq Karim
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Afaq Karim
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Afaq Karim
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                Afaq Karim
+                            </div>
+                        </div>
+                        <div class="w-8">
+                            <div class="mt-1.5 flex items-center gap-0.5">
+                                <img
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Ellipse%20453%20%281%29.svg" />
+                                <h1 class="text-gray-800 font-normal md:text-[6px] text-[4.19px]">
+                                    Delivered
+                                </h1>
+                            </div>
+                            <div class="mt-1.5 flex items-center gap-0.5">
+                                <img
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Ellipse%20453%20%281%29.svg" />
+                                <h1 class="text-gray-800 font-normal md:text-[6px] text-[4.19px]">
+                                    Pending
+                                </h1>
+                            </div>
+                            <div
+                                class="text-gray-800 font-normal mt-1.5 md:ml-3 ml-1.5 md:text-[6px] text-[4.19px]">
+                                Cancel
+                            </div>
+                            <div class="mt-1.5 flex items-center gap-0.5">
+                                <img
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Ellipse%20453%20%281%29.svg" />
+                                <h1 class="text-gray-800 font-normal md:text-[6px] text-[4.19px]">
+                                    Delivered
+                                </h1>
+                            </div>
+                            <div class=" mt-1.5 flex items-center gap-0.5">
+                                <img
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Ellipse%20453%20%281%29.svg" />
+                                <h1 class="text-gray-800 font-normal md:text-[6px] text-[4.19px]">
+                                    Delivered
+                                </h1>
+                            </div>
+                            <div class="mt-1.5 flex items-center gap-0.5 ">
+                                <img
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Ellipse%20453%20%281%29.svg" />
+                                <h1 class="text-gray-800 font-normal md:text-[6px] text-[4.19px]">
+                                    Delivered
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="w-9">
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                $400.00
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                $400.00
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                $400.00
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                $400.00
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                $400.00
+                            </div>
+                            <div class="text-gray-800 font-normal mt-1.5 md:text-[6px] text-[4.19px]">
+                                $400.00
+                            </div>
+                        </div>
+                        <div class="w-4">
+                            <div class="justify-center items-center mt-2">
+                                <img class="md:block hidden"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2851%29.svg" />
+                                <img class="md:hidden block"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2852%29.svg" />
+                            </div>
+                            <div class="justify-center items-center mt-2.5">
+                                <img class="md:block hidden"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2851%29.svg" />
+                                <img class="md:hidden block"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2852%29.svg" />
+                            </div>
+                            <div class="justify-center items-center mt-2.5">
+                                <img class="md:block hidden"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2851%29.svg" />
+                                <img class="md:hidden block"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2852%29.svg" />
+                            </div>
+                            <div class="justify-center items-center  md:mt-3 mt-2.5">
+                                <img class="md:block hidden"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2851%29.svg" />
+                                <img class="md:hidden block"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2852%29.svg" />
+                            </div>
+                            <div class="justify-center items-center  md:mt-3 mt-2.5">
+                                <img class="md:block hidden"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2851%29.svg" />
+                                <img class="md:hidden block"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2852%29.svg" />
+                            </div>
+                            <div class="justify-center items-center md:mt-3 mt-2.5">
+                                <img class="md:block hidden"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2851%29.svg" />
+                                <img class="md:hidden block"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Vector%20%2852%29.svg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden lg:hidden block">
+            <div class="flex w-full mt-2 gap-2">
+                <div class="bg-white lg:max-w-[339.83px] max-w-[204px] w-full px-2 rounded">
+                    <div class="">
+                        <div class="flex mt-2">
+                            <div class="text-gray-800 font-bold" style="font-size: 7.17px">
+                                Total Revenue
+                            </div>
+                            <div class="flex gap-2 ml-auto">
+                                <div class="flex items-center gap-0.">
+                                    <div class="">
+                                        <img
+                                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Ellipse%20452.svg" />
+                                    </div>
+                                    <h1 class="text-gray-600 font-medium" style="font-size: 5.38px">
+                                        Profit
+                                    </h1>
+                                </div>
+                                <div class="flex items-center gap-0.5">
+                                    <div class="">
+                                        <img
+                                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Ellipse%20453.svg" />
+                                    </div>
+                                    <h1 class="text-gray-600 font-medium" style="font-size: 5.38px">
+                                        Loss
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-0.5">
+                            <div class="text-gray-800 font-bold mt-0.5" style="font-size: 10.76px">
+                                $50.4K
+                            </div>
+                            <div class="ml-1">
+                                <img
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Arrow%201.svg" />
+                            </div>
+                            <div class="text-gray-600 font-medium mt-0.5" style="font-size: 5.38px">
+                                5% than last month
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+
+        <div class="xl:w-[624px] lg:w-[624px] md:w-[624px] sm:w-[320px] w-[320]">
+            <h1 class=" text-[#1F2937] font-medium text-3xl xl:text-5xl lg:text-5xl md:text-5xl sm:text-3xl font-[poppins] leading-[60px] mx-auto mt-20 text-left">
+                Boost revenue with more intelligent systems
+            </h1>
+            <div class="flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-col gap-y-8 mt-10 xl:w-[624px] lg:w-[524px] md:w-[624px] sm:w-[315px] justify-between">
+                <div class="flex flex-col w-[197px] h-[192px]">
+                    <div class="flex flex-col gap-y-4">
+                        <h1 class="font-medium font-[poppins] text-3xl leading-[30px] text-left text-[#1F2937]">
+                            90%
+                        </h1>
+                        <p class="font-normal text-lg font-[poppins] leading-18px text-[#4B5563]">
+                            Ease of Use
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-y-4 mt-12">
+                        <h1 class="font-medium font-[poppins] text-3xl leading-[30px] text-left text-[#1F2937]">
+                            82%
+                        </h1>
+                        <p class="font-normal text-lg font-[poppins] leading-18px text-[#4B5563]">
+                            Account Engagement
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="flex flex-col w-[197px] h-[192px]">
+                    <div class="flex flex-col gap-y-4">
+                        <h1 class="font-medium font-[poppins] text-3xl leading-[30px] text-left text-[#1F2937]">
+                            87%
+                        </h1>
+                        <p class="font-normal text-lg font-[poppins] leading-18px text-[#4B5563]">
+                            Predictive Forecast
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-y-4 mt-12">
+                        <h1 class="font-medium font-[poppins] text-3xl leading-[30px] text-left text-[#1F2937]">
+                            70%
+                        </h1>
+                        <p class="font-normal text-lg font-[poppins] leading-[18px] text-[#4B5563]">
+                            Data Segmentation
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- boost revenue section end -->
+
+
+<!-- companies section start -->
+
+
+<div class="justify-center align-center items-center mx-auto">
+    <div class="bg-[#FFFFFF] xl:mx-44 lg:mx-2 md:mx-24 sm:mx-4 mx-8 my-20">
+        <div class="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-x-12">
+            <div class="flex flex-col h-[380px] justify-between xl:mt-20 lg:mt-20 md:mt-20 sm:mt-4 mt-0">
+                <div class="flex flex-row shadow-xl rounded-3xl w-[232px] h-[166px]">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/box1.png" class="w-36 h-9 my-16 mx-12" alt=""/>
+                </div>
+                <div class="flex flex-row shadow-xl rounded-3xl w-[232px] h-[166px]">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/andela.png" class="w-36 h-9 my-16 mx-12" alt=""/>
+                </div>
+            </div>
+
+
+            <div class="flex flex-col h-[595px] justify-between ">
+                <div class="flex flex-row shadow-xl rounded-3xl w-[232px] h-[166px]">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/60px-top-bar.png" class="w-36 h-9 my-16 mx-12" alt=""/>
+                </div>
+                <div class="flex flex-row shadow-xl rounded-3xl w-[232px] h-[166px]">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Group%20%281%29.png" class="w-36 h-9 my-16 mx-12" alt=""/>
+                </div>
+                <div class="flex flex-row shadow-xl rounded-3xl w-[232px] h-[166px]">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Lattice%20svg.png" class="w-36 h-9 my-16 mx-12" alt=""/>
+                </div>
+            </div>
+
+
+            <div class="flex flex-col h-[380px] justify-between xl:mt-20 lg:mt-20 md:mt-20 sm:mt-4 mt-0">
+                <div class="flex flex-row shadow-xl rounded-3xl w-[232px] h-[166px]">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Group%20%283%29.png" class="w-36 h-9 my-16 mx-12" alt=""/>
+                </div>
+                <div class="flex flex-row shadow-xl rounded-3xl w-[232px] h-[166px]">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Frame.png" class="w-36 h-9 my-16 mx-12" alt=""/>
+                </div>
+            </div>
+
+
+            <div class="flex flex-col h-[595px] justify-between ">
+                <div class="flex flex-row shadow-xl rounded-3xl w-[232px] h-[166px]">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash%20svg.png" class="w-36 h-9 my-16 mx-12" alt=""/>
+                </div>
+                <div class="flex flex-row shadow-xl rounded-3xl w-[232px] h-[166px]">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/box1.png" class="w-36 h-9 my-16 mx-12" alt=""/>
+                </div>
+                <div class="flex flex-row shadow-xl rounded-3xl w-[232px] h-[166px]">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/andela.png" class="w-36 h-9 my-16 mx-12" alt=""/>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+        
+    </div>
+    
+<!-- companies section end -->
+
+
+<!-- login section start -->
+
+
+<div class="justify-center align-center items-center mx-auto">
+    <div class="bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 ...">
+        <div class="px-2 xl:px-20 lg:px-0 md:px-20 sm:px-2 py-20 flex flex-col xl:flex-row lg:flex-row md:flex-col sm:flex-col">
+
+            <div class="xl:w-[515px] lg:w-[455px] md:w-[515px] sm:w-[320px] w-[320] bg-white px-8 py-8 rounded-2xl">
+                <h1 class="font-medium font-[poppins] text-3xl leading-[30px] text-center text-[#1F2937] pt-8">
+                    Get Started
+                </h1>
+                <h1 class="mt-8 font-normal text-sm text-left text-[#1F2937] font-[poppins]">
+                    Email
+                </h1>
+                <input class="mt-4 py-4 px-4 xl:mx-0 lg:mx-0 md:mx-auto sm:mx-auto mx-auto w-full xl:w-[451px] lg:w-[406px] md:w-[451px] sm:w-[248px] w-[248px] rounded-2xl border" type="text" placeholder="" name="search">
+                <h1 class="mt-8 font-normal text-sm text-left text-[#1F2937] font-[poppins]">
+                    Message
+                </h1>
+                <input class="mt-4 py-8 px-4 xl:mx-0 lg:mx-0 md:mx-auto sm:mx-auto mx-auto w-full xl:w-[451px] lg:w-[406px] md:w-[451px] sm:w-[248px] w-[248px] rounded-2xl border" type="text" placeholder="" name="search">
+                <button class="bg-[#1F2937] rounded-3xl px-4 py-4 xl:mx-0 mt-8 lg:mx-0 md:mx-auto sm:mx-auto mx-auto text-white w-full xl:w-[451px] lg:w-[406px] md:w-[451px] sm:w-[248px] w-[248px] font-[poppins]" type="submit">Reques Demo</button>
+                <h1 class="mt-8 font-normal text-sm text-center text-[#1F2937] font-[poppins]">
+                    To learn how we handles your information, please see our privacy policy.
+                </h1>
+            </div>
+
+
+            <div class="xl:w-[515px] lg:w-[455px] md:w-[515px] sm:w-[320px] w-[320] xl:ml-36 lg:ml-6 md:ml-0 sm:ml-8 ml-8">
+                <h1 class=" text-[#1F2937] font-medium text-3xl xl:text-5xl lg:text-5xl md:text-5xl sm:text-3xl font-[poppins] leading-[60px] mx-auto mt-20 text-left">
+                    Ready to chat?
+                </h1>
+                <p class="font-normal text-lg font-[poppins] leading-[29px] xl:w-[515px] lg:w-[455px] md:w-[515px] sm:w-[320px] w-[320] mt-6 text-[#4B5563]">
+                    See how Hyphen powers effective revenue engines of the world's fastest-growing businesses.
+                </p>
+
+                <div class="flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-col mt-12 xl:w-[515px] lg:w-[455px] md:w-[515px] sm:w-[315px] w-[310px] justify-between">
+                    <div class="flex flex-col">
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/call-calling.png" class="w-10 h-10" alt=""/>
+                        <h1 class="font-medium font-[poppins] text-xl leading-[30px] text-left text-[#1F2937] mt-8">
+                            Call Us
+                        </h1>
+                        <p class="font-normal text-lg font-[poppins] leading-[29px] mt-4 text-[#4B5563]">
+                            486-847-8221
+                        </p>
+                        <p class="font-normal text-lg font-[poppins] leading-[29px] mt-4 text-[#4B5563]">
+                            863-356-7013
+                        </p>
+                    </div>
+
+
+                    <div class="flex flex-col">
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sms-notification.png" class="w-10 h-10" alt=""/>
+                        <h1 class="font-medium font-[poppins] text-xl leading-[30px] text-left text-[#1F2937] mt-8">
+                            Email
+                        </h1>
+                        <p class="font-normal text-lg font-[poppins] leading-[29px] mt-4 text-[#4B5563]">
+                            Christian.Terry@gmail.com
+                        </p>
+                        <p class="font-normal text-lg font-[poppins] leading-[29px] mt-4 text-[#4B5563]">
+                            Aisha.Pacocha@yahoo.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- login section end -->
+
+
+    <!-- Footer -->
+
+
+    <div
+    class="w-full bg m-auto backdrop-blur-md  lg:py-12 py-0 bg-[url('https://tuk-cdn.s3.amazonaws.com/can-uploader/30px%20Cross%20%2826%29.png')]">
+    <div class="lg:max-w-[1440px] md:max-w-[744px] max-w-[375px] mx-auto px-4 lg:pt-12 md:pt-14 pt-10">
+        <div class="lg:flex max-w-[1280px] mx-auto justify-between gap-5">
+            <div class="lg:w-[338px] w-full">
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/HYPHEN%20%281%29.svg" />
+            </div>
+            <div
+                class="lg:w-[952px] w-full gap-12 md:grid-cols-3 grid-cols-1 grid justify-between lg:mt-0 mt-8">
+                <div class="">
+                    <div class="">
+                        <h1 class="font-medium text-2xl text-gray-800">Company</h1>
+                        <h1 class="font-normal mt-3 text-gray-600 text-base">Company</h1>
+                        <h1 class="text-base font-normal mt-3 text-gray-600">Features</h1>
+                        <h1 class="text-base font-normal mt-3 text-gray-600">Works</h1>
+                    </div>
+                    <div class="mt-12">
+                        <h1 class="font-medium text-2xl text-gray-800">Help</h1>
+                        <h1 class="font-normal mt-3 text-gray-600 text-base">Customer Support</h1>
+                        <h1 class="text-base font-normal mt-3 text-gray-600">Delivery Details</h1>
+                        <h1 class="text-base font-normal mt-3 text-gray-600">Terms & conditions</h1>
+                        <h1 class="text-base font-normal mt-3 text-gray-600">Privacy policy</h1>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="">
+                        <h1 class="font-medium text-2xl text-gray-800">Resources</h1>
+                        <h1 class="font-normal mt-3 text-gray-600 text-base">Free ebooks</h1>
+                        <h1 class="text-base font-normal mt-3 text-gray-600">Webinars</h1>
+                        <h1 class="text-base font-normal mt-3 text-gray-600">Free tools</h1>
+                        <h1 class="text-base font-normal mt-3 text-gray-600">Newsletter</h1>
+                    </div>
+                    <div class="md:mt-5 mt-12">
+                        <h1 class="font-medium text-2xl text-gray-800">Company</h1>
+                        <h1 class="font-normal mt-3 text-gray-600 text-base">About Us</h1>
+                        <h1 class="text-base font-normal mt-1 text-gray-600">Careers</h1>
+                        <h1 class="text-base font-normal mt-1 text-gray-600">Press</h1>
+                        <h1 class="text-base font-normal mt-1 text-gray-600">Customers</h1>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="">
+                        <h1 class="font-medium text-2xl text-gray-800">Use Casesy</h1>
+                        <h1 class="font-normal mt-3 text-gray-600 text-base">Account prioritization</h1>
+                        <h1 class="text-base font-normal mt-1 text-gray-600">Ad targeting</h1>
+                        <h1 class="text-base font-normal mt-1 text-gray-600">Conversion tracking</h1>
+                        <h1 class="text-base font-normal mt-1 text-gray-600">Data enrichment</h1>
+                        <h1 class="text-base font-normal mt-1 text-gray-600">Form optimizations</h1>
+                        <h1 class="text-base font-normal mt-1 text-gray-600">Lead scoring & routing</h1>
+                        <h1 class="text-base font-normal mt-1 text-gray-600">Visitor insights</h1>
+                        <h1 class="text-base font-normal mt-1 text-gray-600">Advanced personalization
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+
+    <script>
+        var ctx = document.getElementById("Chartjs").getContext("2d");
+        var myChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: [
+                    "JAN",
+                    "FEB",
+                    "MAR",
+                    "APR",
+                    "MAY",
+                    "JUN",
+                    "JUL",
+                    "AUG",
+                    "SEP",
+                ],
+
+
+                datasets: [
+                    {
+                        label: "",
+                        data: [100, 80, 83, 65, 70, 50, 60, 80, 65],
+                        backgroundColor: "#4B5563",
+                    },
+                    {
+                        label: "",
+                        data: [65, 50, 35, 85, 55, 25, 30, 60, 50],
+                        backgroundColor: "#E4E8EF",
+                    },
+                ],
+            },
+
+            options: {
+                legend: {
+                    labels: {
+                        boxWidth: 0,
+                        boxHeight: 0,
+                    },
+                },
+                scales: {
+                    xAxes: [
+                        {
+                            gridLines: {
+                                display: false,
+                            },
+                            ticks: {
+                                fontSize: 6
+                            }
+                        },
+                    ],
+                    yAxes: [
+                        {
+                            gridLines: {
+                                display: false,
+                            },
+                            ticks: {
+                                fontSize: 6
+                            }
+                        },
+                    ],
+                },
+            },
+        });
+    </script>
+
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+
+<style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+    body {
+      font-family: Poppins;
+    }
+    .show {
+      display: none;
+    }
+    .show1 {
+      display: none;
+    }
+    .dropdown-content {
+      z-index: 10;
+      position: absolute;
+      top: 28;
+    }
+    .showBlock {
+      display: block;
+    }
+  </style>
+
+
+    <script>
+        function toogleMenu(flag) {
+            value = document.getElementById("Menu");
+            if (flag) { value.classList.remove("hidden"); }
+            else { value.classList.add("hidden"); }
+        }
+    
+        function tooglecross(flag) {
+            value = document.getElementById("cross");
+            if (flag) { value.classList.remove("hidden"); }
+            else { value.classList.add("hidden"); }
+        }
+
+        function openResources() {
+            document.getElementById("Dropdown").classList.toggle("show");
+            document.getElementById("arrow").classList.toggle("show");
+        }
+        function openMainMenu() {
+            document.getElementById("mainMenu").classList.toggle("show");
+        }
+        function openResources1() {
+            document.getElementById("Dropdown1").classList.toggle("show1");
+            document.getElementById("arrow1").classList.toggle("show1");
+        }
+        function closeMenu() {
+            if (
+            event.target.id != "a" &&
+            Dropdown.classList.contains("show") !== true
+            ) {
+            Dropdown.classList.add("show");
+            } else if (
+            event.target.id != "a1" &&
+            Dropdown1.classList.contains("show1") !== true
+            ) {
+            Dropdown1.classList.add("show1");
+            }
+        }
+    </script>
+    
+
+    <style>
+        .hero-bg{
+            background: rgba(244, 244, 244, 0.6);
+backdrop-filter: blur(200px);
+/* Note: backdrop-filter has minimal browser support */
+        }
+
+
+        .text {
+            background: linear-gradient(93.33deg,
+                    #fd944e 2.95%,
+                    #f56565 19.91%,
+                    #1d4ed8 37.92%,
+                    #ff3565 99.42%);
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+
+    </style>
+
+    </div>
+</body>
+</html>
